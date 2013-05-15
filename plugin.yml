@@ -1,0 +1,26 @@
+name: NeedCombined
+description: A Need plugin which broadcasts for Towns, Cities, Groups, Factions, Clans
+version: 1.0
+
+main: me.jacklin213.needcombined.NeedCombined
+author: jacklin213
+
+commands:
+  needcombined:
+    description: Main plugin command for doing local plugin based things.
+    usage: /needcombined
+
+permissions:
+  needcombined.*:
+    description: Allows usage of all needcombined commands.
+    default: op
+    children:
+      needcombined.help: true
+      needcombined.reload: true
+      
+  needcombined.help:
+    description: Allows usage of the /needcombined help command
+    default: op
+  needcombined.reload: 
+    description: Allows usage of the /needcombined reload command
+    default: op
