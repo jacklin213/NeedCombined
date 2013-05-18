@@ -3,5 +3,55 @@
 # Copyright 2013 Licence LinCraft(林)
 # http://dev.bukkit.org/licenses/2049-lin-craft-license/  
 
+# Cooldown Message used in all commands
+Cooldown-Message: 'This command is on cooldown!'
+
+# Commands, Messages, Cooldowns 
+# For Message color formats, feel free to look in the color.yml to see the avalible colors.
+# Custom Command (Do not change the command name!)
+CustomCommand:
+  MyNeed:
+    Enable: true
+    Message: '%p Is looking For a <example>, <example> be sure to invite %p'
+    Cooldown: 10
+    Aliases: mn 
+    
+# Plugin Supported Commands
+# IMPORTANT: Do not put a / in front of the Aliases
+# Feel free to add suggestions at: http://dev.bukkit.org/server-mods/needcombined
+Commands:
+  NeedCity:
+    Enable: true
+    Message: '%p Is looking For a City, Mayors be sure to invite %p'
+    Cooldown: 10
+    Aliases: ncity 
+  NeedClan:
+    Enable: true
+    Message: '%p Is looking For a Clan, Leaders be sure to invite %p'
+    Cooldown: 10
+    Aliases: nclan
+  NeedFaction:
+    Enable: true
+    Message: '%p Is looking For a Faction, Leaders be sure to invite %p'
+    Cooldown: 10
+    Aliases: nf
+  NeedGroup:
+    Enable: true
+    Message: '%p Is looking For a Groups, Friends be sure to invite %p'
+    Cooldown: 10
+    Aliases: ng
+  NeedNation:
+    Enable: true
+    Message: '%p Is looking For a Nation, Kings be sure to invite %p'
+    Cooldown: 10
+    Aliases: nn
+  NeedTown:
+    Enable: true
+    Message: '%p Is looking For a Town, Mayors be sure to invite %p'
+    Cooldown: 10
+    Aliases: nt 
+
 # Check for updates? 
 UpdateCheck: true
+
+#====== END OF CONFIGURATION ====== #

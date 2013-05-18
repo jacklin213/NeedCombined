@@ -9,7 +9,7 @@ import org.bukkit.command.CommandSender;
 
 public class NeedCombinedCommand implements CommandExecutor {
 	
-	public NeedCombined plugin;
+	public static NeedCombined plugin;
 	public MessageHandler msgHandler = new MessageHandler(plugin);
 	
 	public NeedCombinedCommand(NeedCombined instance) {
@@ -17,7 +17,7 @@ public class NeedCombinedCommand implements CommandExecutor {
 	}
 
 	public boolean onCommand(CommandSender sender, Command cmd, String commandLabel, String[] args) {
-		if (commandLabel.equalsIgnoreCase("needcombined")){
+		if (commandLabel.equalsIgnoreCase("needcombined") || commandLabel.equalsIgnoreCase("nc")){
 			if (args.length == 1){
 				if (args[0].equalsIgnoreCase("info")){
 					msgHandler.info(sender);
@@ -35,6 +35,8 @@ public class NeedCombinedCommand implements CommandExecutor {
 				if (args[0].equalsIgnoreCase("reload")){
 					if (sender.hasPermission("needcombined.reload")){
 						plugin.reloadConfig();
+						msgHandler.configReloaded(sender);
+						return true;
 					} else {
 						sender.sendMessage(msgHandler.permMessage);
 						return true;

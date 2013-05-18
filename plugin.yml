@@ -9,6 +9,28 @@ commands:
   needcombined:
     description: Main plugin command for doing local plugin based things.
     usage: /needcombined
+    aliases: nc 
+  needcity:
+    description: Broadcasts the NeedCity message
+    usage: /needcity
+  needclan:
+    description: Broadcasts the NeedClan message
+    usage: /needclan
+  needfaction:
+    description: Broadcasts the NeedFaction message
+    usage: /needfaction
+  needgroup:
+    description: Broadcasts the NeedGroup message
+    usage: /needgroup
+  neednation:
+    description: Broadcasts the NeedNation message
+    usage: /neednation
+  needtown:
+    description: Broadcasts the NeedTown message
+    usage: /needtown
+  myneed:
+    description: Broadcasts the MyNeed message
+    usage: /myneed
 
 permissions:
   needcombined.*:
@@ -17,7 +39,40 @@ permissions:
     children:
       needcombined.help: true
       needcombined.reload: true
+      needcombined.commands: true
+  needcombined.commands:
+    description: Allows usage of all needcombined subcommands
+    default: true
+    children:
+      needcombined.needcity: true
+      needcombined.needclan: true
+      needcombined.needfaction: true
+      needcombined.needgroup: true
+      needcombined.neednation: true
+      needcombined.needtown: true
+      needcombined.myneed: true
       
+  needcombined.needcity:
+    description: Allows usage of the /needcity help command
+    default: true
+  needcombined.needclan:
+    description: Allows usage of the /needclan help command
+    default: true
+  needcombined.needfaction:
+    description: Allows usage of the /needfaction help command
+    default: true
+  needcombined.needgroup:
+    description: Allows usage of the /needgroup help command
+    default: true
+  needcombined.neednation:
+    description: Allows usage of the /neednation help command
+    default: true
+  needcombined.needtown:
+    description: Allows usage of the /needtown help command
+    default: true
+  needcombined.myneed:
+    description: Allows usage of the /myneed help command
+    default: true
   needcombined.help:
     description: Allows usage of the /needcombined help command
     default: op
